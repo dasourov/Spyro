@@ -12,7 +12,7 @@ export default function IcedDrinksPage() {
       description: 'Chilled espresso with water',
       price: 1000,
       category: 'iced-drink',
-      image: '/iced-americano.jpg'
+      image: '/icedamericano.jpg'
     },
     {
       id: 102,
@@ -20,7 +20,7 @@ export default function IcedDrinksPage() {
       description: 'Espresso with cold milk and ice',
       price: 1390,
       category: 'iced-drink',
-      image: '/iced-latte.jpg'
+      image: '/icedlatte.jpg'
     },
     {
       id: 103,
@@ -28,7 +28,7 @@ export default function IcedDrinksPage() {
       description: 'Latte with vanilla flavor served cold',
       price: 1450,
       category: 'iced-drink',
-      image: '/iced-vanilla-latte.jpg'
+      image: '/icedvanilla.jpg'
     },
     {
       id: 104,
@@ -36,7 +36,7 @@ export default function IcedDrinksPage() {
       description: 'Latte with caramel flavor served cold',
       price: 1450,
       category: 'iced-drink',
-      image: '/iced-caramel-latte.jpg'
+      image: '/icedcaramel.jpg'
     },
     {
       id: 105,
@@ -44,7 +44,7 @@ export default function IcedDrinksPage() {
       description: 'Latte with salted caramel flavor served cold',
       price: 1450,
       category: 'iced-drink',
-      image: '/iced-salted-caramel-latte.jpg'
+      image: '/icedasltedcaramel.jpg'
     },
     {
       id: 106,
@@ -52,7 +52,7 @@ export default function IcedDrinksPage() {
       description: 'Spiced chai tea blend with milk served cold',
       price: 1590,
       category: 'iced-drink',
-      image: '/iced-chai-latte.jpg'
+      image: '/icedchai.jpg'
     }
   ];
 
