@@ -12,15 +12,15 @@ export default function DessertsPage() {
       description: "Delicious pistachio cake with raspberry filling",
       price: 1590,
       category: "dessert",
-      image: "/dessert-pistachio-raspberry.jpg",
+      image: "/pistachio.jpg",
     },
     {
       id: 2,
-      name: "Pistachio Cheesecake",
-      description: "Creamy pistachio cheesecake for sweet lovers",
+      name: "Lemon Cheesecake",
+      description: "Lemon Dream Cheesecake – gives a soft, indulgent vibe",
       price: 1490,
       category: "dessert",
-      image: "/dessert-pistachio-cheesecake.jpg",
+      image: "/lemoncheesecake.jpg",
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ export default function DessertsPage() {
       description: "Classic Italian tiramisu with coffee flavor",
       price: 990,
       category: "dessert",
-      image: "/dessert-tiramisu.jpg",
+      image: "/tiramisu.jpg",
     },
     {
       id: 4,
@@ -36,7 +36,15 @@ export default function DessertsPage() {
       description: "Rich cheesecake topped with caramel sauce",
       price: 1490,
       category: "dessert",
-      image: "/dessert-caramel-cheesecake.jpg",
+      image: "/caramelcheesecake.jpg",
+    },
+    {
+      id: 5,
+      name: "Pistachio Cheesecake",
+      description: "Another variant of creamy pistachio cheesecake",
+      price: 1490,
+      category: "dessert",
+      image: "/pistachiocheesecake.jpg",
     },
   ];
 
@@ -46,7 +54,8 @@ export default function DessertsPage() {
       <main className="flex-grow px-4 py-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold text-white mb-2">Desserts Menu</h1>
-          <p className="text-gray-200 mb-8">Choose from our delicious desserts ⭐ All products price include the VAT</p>
+          <p className="text-gray-200 mb-1">Choose from our delicious desserts</p>
+          <p className="text-gray-200 mb-8">⭐ All products price include VAT</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             {desserts.map(product => {
