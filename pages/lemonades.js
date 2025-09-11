@@ -12,7 +12,7 @@ export default function LemonadesPage() {
       description: 'Refreshing classic lemonade',
       price: 990,
       category: 'lemonade',
-      image: '/lemonade-classic.jpg'
+      image: '/classiclemonade.jpg'
     },
     {
       id: 302,
@@ -20,7 +20,7 @@ export default function LemonadesPage() {
       description: 'Sweet and tangy pink lemonade',
       price: 1190,
       category: 'lemonade',
-      image: '/lemonade-pink.jpg'
+      image: '/pinklemonade.jpg'
     },
     {
       id: 303,
@@ -28,7 +28,7 @@ export default function LemonadesPage() {
       description: 'Exotic blend of mango and passionfruit with lemonade',
       price: 1290,
       category: 'lemonade',
-      image: '/lemonade-mango-passionfruit.jpg'
+      image: '/passionFruitlemonade.jpg'
     }
   ];
 
