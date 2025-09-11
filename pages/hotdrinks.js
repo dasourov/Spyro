@@ -20,7 +20,7 @@ export default function HotDrinksPage() {
       description: 'Double shot of strong espresso',
       price: 990,
       category: 'hot-drink',
-      image: '/double-espresso.jpg'
+      image: '/espresso.jpg'
     },
     {
       id: 3,
@@ -60,7 +60,7 @@ export default function HotDrinksPage() {
       description: 'Spiced tea blend with steamed milk',
       price: 1490,
       category: 'hot-drink',
-      image: '/chai-latte.jpg'
+      image: '/chailatte.jpg'
     },
     {
       id: 8,
@@ -68,7 +68,7 @@ export default function HotDrinksPage() {
       description: 'Chai latte with an espresso shot',
       price: 1690,
       category: 'hot-drink',
-      image: '/dirty-chai.jpg'
+      image: '/dirtychailatte.jpg'
     },
     {
       id: 9,
@@ -76,7 +76,7 @@ export default function HotDrinksPage() {
       description: 'Espresso with steamed milk (Small)',
       price: 1090,
       category: 'hot-drink',
-      image: '/latte-small.jpg'
+      image: '/latteonly.jpg'
     },
     {
       id: 10,
@@ -84,7 +84,7 @@ export default function HotDrinksPage() {
       description: 'Espresso with steamed milk (Medium)',
       price: 1290,
       category: 'hot-drink',
-      image: '/latte-medium.jpg'
+      image: '/latteonly.jpg'
     },
     {
       id: 11,
@@ -92,7 +92,7 @@ export default function HotDrinksPage() {
       description: 'Espresso with milk foam (Small)',
       price: 1090,
       category: 'hot-drink',
-      image: '/cappuccino-small.jpg'
+      image: '/cappuccinoonly.jpg'
     },
     {
       id: 12,
@@ -100,7 +100,7 @@ export default function HotDrinksPage() {
       description: 'Espresso with milk foam (Medium)',
       price: 1290,
       category: 'hot-drink',
-      image: '/cappuccino-medium.jpg'
+      image: '/cappuccinoonly.jpg'
     },
     {
       id: 13,
@@ -108,7 +108,7 @@ export default function HotDrinksPage() {
       description: 'Espresso with chocolate & steamed milk (Small)',
       price: 1350,
       category: 'hot-drink',
-      image: '/mocha-small.jpg'
+      image: '/mochaonly.jpg'
     },
     {
       id: 14,
@@ -116,7 +116,7 @@ export default function HotDrinksPage() {
       description: 'Espresso with chocolate & steamed milk (Medium)',
       price: 1590,
       category: 'hot-drink',
-      image: '/mocha-medium.jpg'
+      image: '/mochaonly.jpg'
     }
   ];
 
