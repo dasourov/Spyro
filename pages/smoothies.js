@@ -12,7 +12,7 @@ export default function SmoothiesPage() {
       description: 'Refreshing blend of mango and pineapple',
       price: 1590,
       category: 'smoothie',
-      image: '/smoothie-mango-pineapple.jpg'
+      image: '/mangopineapple.jpg'
     },
     {
       id: 202,
@@ -20,7 +20,7 @@ export default function SmoothiesPage() {
       description: 'Mixed berries smoothie full of flavor',
       price: 1590,
       category: 'smoothie',
-      image: '/smoothie-forest-fruit.jpg'
+      image: '/forestfruit.jpg'
     }
   ];
 
