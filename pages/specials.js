@@ -6,12 +6,12 @@ export default function SpecialsPage() {
   const { cartItems, addToCart, updateQuantity, removeFromCart } = useCart();
   
   const specials = [
-    { id: 301, name: 'Hot Matcha Latte (Small)', price: 1390, category: 'special', image: '/matcha-small.jpg' },
-    { id: 302, name: 'Hot Matcha Latte (Medium)', price: 1490, category: 'special', image: '/matcha-medium.jpg' },
-    { id: 303, name: 'Iced Matcha', price: 1690, category: 'special', image: '/iced-matcha.jpg' },
-    { id: 304, name: 'Cherry Vanilla Latte', price: 1690, category: 'special', image: '/cherry-vanilla.jpg' },
-    { id: 305, name: 'Extra Syrup', price: 190, category: 'extra', image: '/extra-syrup.jpg' },
-    { id: 306, name: 'Whipped Cream', price: 90, category: 'extra', image: '/whipped-cream.jpg' }
+    { id: 301, name: 'Hot Matcha Latte (Small)', price: 1390, category: 'special', image: '/hotmatchalatte.jpg' },
+    { id: 302, name: 'Hot Matcha Latte (Medium)', price: 1490, category: 'special', image: '/hotmatchalatte.jpg' },
+    { id: 303, name: 'Iced Matcha', price: 1690, category: 'special', image: '/icedmatcha.jpg' },
+    { id: 304, name: 'Cherry Vanilla Latte', price: 1690, category: 'special', image: '/cherry.jpg' },
+    { id: 305, name: 'Extra Syrup', price: 190, category: 'extra', image: '/syrup.jpg' },
+    { id: 306, name: 'Whipped Cream', price: 90, category: 'extra', image: '/whippedcream.jpg' }
   ];
 
   return (
