@@ -5,12 +5,9 @@ import Header from '../components/Header';
 
 export default function PaymentPage() {
   const { cartItems, getTotalPrice, clearCart } = useCart();
-  const [paymentMethod, setPaymentMethod] = useState('cash');
-  const [emailReceipt, setEmailReceipt] = useState(false);
-  const [email, setEmail] = useState('');
+  const [paymentMethod] = useState('card'); // locked to card
   const [isProcessing, setIsProcessing] = useState(false);
   const [paymentComplete, setPaymentComplete] = useState(false);
-  const [emailStatus, setEmailStatus] = useState(null);
   const [tableId, setTableId] = useState(null);
 
   // Load table_id from localStorage (set on OrderPage)
@@ -20,66 +17,48 @@ export default function PaymentPage() {
   }, []);
 
   const handleSubmit = async (e) => {
-  if (e) e.preventDefault();
-  if (!tableId) return alert('Table ID not found.');
+    if (e) e.preventDefault();
+    if (!tableId) return alert('Table ID not found.');
 
-  setIsProcessing(true);
-  setEmailStatus(null);
+    setIsProcessing(true);
 
-  try {
-    const orderDetails = {
-      table_id: tableId,
-      items: cartItems.map(item => ({
-        name: item.name,
-        quantity: item.quantity,
-        price: item.price // <-- Already in Ft
-      })),
-      total: getTotalPrice(),
-      payment_method: paymentMethod,
-      notes: paymentMethod === 'cash'
-        ? 'Cash'
-        : 'Card'
-    };
+    try {
+      const orderDetails = {
+        table_id: tableId,
+        items: cartItems.map(item => ({
+          name: item.name,
+          quantity: item.quantity,
+          price: item.price
+        })),
+        total: getTotalPrice(),
+        payment_method: 'card',
+        notes: 'Card'
+      };
 
-    // Send order to FastAPI backend
-    const response = await fetch("https://spyrobackend.onrender.com/api/orders/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(orderDetails),
-    });
+      // Send order to FastAPI backend
+      const response = await fetch("https://spyro-pgc7.onrender.com/api/orders/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(orderDetails),
+      });
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(errorData.detail || "Failed to place order");
-    }
-
-    const result = await response.json();
-    console.log("Order created:", result);
-
-    // Optional: send email receipt if cash
-    if (paymentMethod === 'cash' && emailReceipt && email) {
-      try {
-        const emailResp = await fetch('/api/send-email-postmark', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, orderDetails: result })
-        });
-        const emailResult = await emailResp.json();
-        setEmailStatus(emailResult.success ? 'sent' : 'failed');
-      } catch {
-        setEmailStatus('failed');
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.detail || "Failed to place order");
       }
+
+      const result = await response.json();
+      console.log("Order created:", result);
+
+      setPaymentComplete(true);
+      clearCart();
+
+    } catch (error) {
+      console.error("Error during checkout:", error);
+      setIsProcessing(false);
+      alert(error.message);
     }
-
-    setPaymentComplete(true);
-    clearCart();
-
-  } catch (error) {
-    console.error("Error during checkout:", error);
-    setIsProcessing(false);
-    alert(error.message);
-  }
-};
+  };
 
   if (paymentComplete) {
     return (
@@ -95,16 +74,6 @@ export default function PaymentPage() {
               </div>
               <h1 className="text-2xl font-bold text-gray-800 mb-2">Payment Successful!</h1>
               <p className="text-gray-600 mb-6">Your order has been placed and will be served soon.</p>
-
-              {emailReceipt && email && (
-                <div className="mb-6">
-                  {emailStatus === 'sent' ? (
-                    <p className="text-gray-600">A receipt has been sent to <strong>{email}</strong></p>
-                  ) : (
-                    <p className="text-gray-600">Failed to send receipt to <strong>{email}</strong></p>
-                  )}
-                </div>
-              )}
 
               <Link href="/">
                 <button className="w-full py-3 font-bold text-white transition-colors duration-300"
@@ -157,63 +126,23 @@ export default function PaymentPage() {
               <h2 className="font-semibold text-gray-800">Payment Method</h2>
             </div>
             <div className="p-4">
-              <div className="flex space-x-4 mb-6">
+              <div className="flex justify-center mb-6">
                 <button
-                  onClick={() => setPaymentMethod('cash')}
-                  className={`flex-1 py-3 text-center font-medium transition-colors duration-300 ${paymentMethod === 'cash' ? 'bg-gray-100' : 'hover:bg-gray-50'}`}
-                  style={{ border: paymentMethod === 'cash' ? `2px solid #136356` : '2px solid transparent' }}
-                >
-                  Pay with Cash
-                </button>
-                <button
-                  onClick={() => setPaymentMethod('card')}
-                  className={`flex-1 py-3 text-center font-medium transition-colors duration-300 ${paymentMethod === 'card' ? 'bg-gray-100' : 'hover:bg-gray-50'}`}
-                  style={{ border: paymentMethod === 'card' ? `2px solid #136356` : '2px solid transparent' }}
+                  className="py-3 px-6 text-center font-medium transition-colors duration-300 bg-gray-100"
+                  style={{ border: `2px solid #136356` }}
+                  disabled
                 >
                   Pay with Card
                 </button>
               </div>
 
-              <p className="text-red-500 font-bold mb-6">
-                {paymentMethod === 'cash' 
-                  ? 'Please note that you can only by cash at our store ‘SPYRÓ’ steps away from MadeByYou! (right beside made by you; left from the entrance across the street)' 
-                  : 'Our agent will come with a POS machine and you can pay with card.'}
+              <p className="text-red-500 font-bold mb-6 text-center">
+                Our agent will come with a POS machine and you can pay with card.
               </p>
-
-              {/* Email Receipt
-              <div className="mb-6">
-                <div className="flex items-center mb-4">
-                  <input
-                    type="checkbox"
-                    id="emailReceipt"
-                    checked={emailReceipt}
-                    onChange={(e) => setEmailReceipt(e.target.checked)}
-                    className="h-4 w-4 text-amber-600 focus:ring-amber-500 border-gray-300 rounded"
-                  />
-                  <label htmlFor="emailReceipt" className="ml-2 block text-sm text-gray-700">
-                    Click here if you want to receive the receipt in your email
-                  </label>
-                </div>
-
-                {emailReceipt && (
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
-                    <input
-                      type="email"
-                      id="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      placeholder="your.email@example.com"
-                      className="w-full px-4 py-2 border border-gray-300 focus:ring-2 focus:ring-amber-500 focus:border-amber-500"
-                      required={emailReceipt}
-                    />
-                  </div>
-                )}
-              </div> */}
 
               <button
                 onClick={handleSubmit}
-                disabled={isProcessing || (emailReceipt && !email)}
+                disabled={isProcessing}
                 className={`w-full py-3 font-bold text-white transition-colors duration-300 ${isProcessing ? 'bg-gray-400' : ''}`}
                 style={{ backgroundColor: isProcessing ? "#cccccc" : "#136356", border: "none" }}
               >
