@@ -55,7 +55,8 @@ export default function DessertsPage() {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold text-white mb-2">Desserts Menu</h1>
           <p className="text-gray-200 mb-1">Choose from our delicious desserts</p>
-          <p className="text-gray-200 mb-8">⭐ All products price include VAT</p>
+          <p className="text-gray-200 mb-1">⭐ All products price include VAT</p>
+          <p className="text-red-500 text-xl font-bold mb-8">Can only be consumed at Spyró Café (Cannot be delivered to MadeByYou)</p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
             {desserts.map(product => {

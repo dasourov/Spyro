@@ -174,13 +174,13 @@ export default function PaymentPage() {
                 </button>
               </div>
 
-              <p className="text-gray-600 mb-6">
+              <p className="text-red-500 font-bold mb-6">
                 {paymentMethod === 'cash' 
-                  ? 'Please pay with cash when our agent serves your order.' 
+                  ? 'Please note that you can only by cash at our store ‘SPYRÓ’ steps away from MadeByYou! (right beside made by you; left from the entrance across the street)' 
                   : 'Our agent will come with a POS machine and you can pay with card.'}
               </p>
 
-              {/* Email Receipt */}
+              {/* Email Receipt
               <div className="mb-6">
                 <div className="flex items-center mb-4">
                   <input
@@ -209,7 +209,7 @@ export default function PaymentPage() {
                     />
                   </div>
                 )}
-              </div>
+              </div> */}
 
               <button
                 onClick={handleSubmit}
