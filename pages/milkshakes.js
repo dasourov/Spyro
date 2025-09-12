@@ -3,90 +3,65 @@ import Header from '../components/Header';
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function DessertsPage() {
+export default function MilkshakesPage() {
   const { cartItems, addToCart, updateQuantity, removeFromCart } = useCart();
-
-  const desserts = [
+  
+  const milkshakes = [
     {
-      id: 1,
-      name: "Pistachio Raspberry Cake",
-      description: "Delicious pistachio cake with raspberry filling",
+      id: 601,
+      name: 'Vanilla Milkshake',
+      description: 'Classic creamy vanilla milkshake',
       price: 1590,
-      category: "dessert",
-      image: "/pistachio.jpg",
+      category: 'milkshake',
+      image: '/vanillamilkshake.jpg'
     },
     {
-      id: 2,
-      name: "Lemon Cheesecake",
-      description: "Lemon Dream Cheesecake – gives a soft, indulgent vibe",
-      price: 1490,
-      category: "dessert",
-      image: "/lemoncheesecake.jpg",
+      id: 602,
+      name: 'Salted Caramel Milkshake',
+      description: 'Sweet and salty caramel indulgence',
+      price: 1590,
+      category: 'milkshake',
+      image: '/saltedcaramelmilkshake.jpg'
     },
     {
-      id: 3,
-      name: "Tiramisu",
-      description: "Classic Italian tiramisu with coffee flavor",
-      price: 990,
-      category: "dessert",
-      image: "/tiramisu.jpg",
-    },
-    {
-      id: 4,
-      name: "Caramel Cheesecake",
-      description: "Rich cheesecake topped with caramel sauce",
-      price: 1490,
-      category: "dessert",
-      image: "/caramelcheesecake.jpg",
-    },
-    {
-      id: 5,
-      name: "Pistachio Cheesecake",
-      description: "Another variant of creamy pistachio cheesecake",
-      price: 1490,
-      category: "dessert",
-      image: "/pistachiocheesecake.jpg",
-    },
-     {
-  id: 6,
-  name: "Chocolate Muffin",
-  description: "Rich and moist chocolate muffin, baked to perfection",
-  price: 790,
-  category: "dessert",
-  image: "/chocolatemuffin.jpg",
-}
-
+      id: 603,
+      name: 'Caramel Milkshake',
+      description: 'Rich and smooth caramel flavor',
+      price: 1590,
+      category: 'milkshake',
+      image: '/caramelmilkshake.jpg'
+    }
   ];
 
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#136356" }}>
       <Header />
+      
       <main className="flex-grow px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-3xl font-bold text-white mb-2">Desserts Menu</h1>
-          <p className="text-gray-200 mb-1">Choose from our delicious desserts</p>
-          <p className="text-gray-200 mb-1">⭐ All products price include VAT</p>
-          <p className="text-red-500 text-xl font-bold mb-1">Can only be consumed at Spyró Café (Cannot be delivered to MadeByYou)</p>
-          <p className="text-red-500 text-xl font-bold mb-8">10% discount for MadeByYou Customers</p>
-
+          <h1 className="text-3xl font-bold text-white mb-2">Milkshakes Menu</h1>
+          <p className="text-gray-200">Choose from our selection of milkshakes</p>
+          <p className="text-gray-200 mb-8">⭐ All products price include the VAT</p>
+          
+          {/* Grid layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            {desserts.map(product => {
+            {milkshakes.map(product => {
               const cartItem = cartItems.find(item => item.id === product.id);
               const quantity = cartItem ? cartItem.quantity : 0;
-
+              
               return (
                 <div key={product.id} className="bg-white shadow-md p-4 flex">
                   {/* Product Image */}
-                   <div className="w-1/4 relative">
-                                                                         <Image 
-                                                                           src={product.image} 
-                                                                           alt={product.name}
-                                                                           fill
-                                                                           className="object-cover"
-                                                                           priority={product.id === 1} // preload the first image
-                                                                         />
-                                       </div>
-
+                  <div className="w-1/4 relative">
+                    <Image 
+                      src={product.image} 
+                      alt={product.name}
+                      fill
+                      className="object-cover"
+                      priority={product.id === 601} // preload the first image
+                    />
+                  </div>
+                  
                   {/* Product Details */}
                   <div className="w-3/4 pl-4 flex flex-col justify-between">
                     <div>
@@ -94,7 +69,7 @@ export default function DessertsPage() {
                       <p className="text-gray-600 mb-2">{product.description}</p>
                       <p className="text-lg font-bold text-gray-900">{product.price} Ft</p>
                     </div>
-
+                    
                     {/* Add to Cart or Quantity Controls */}
                     <div className="mt-2">
                       {quantity === 0 ? (
@@ -139,13 +114,17 @@ export default function DessertsPage() {
               );
             })}
           </div>
-
+          
           {/* Back to Categories Button */}
           <div className="flex justify-center">
             <Link href="/order">
               <button 
                 className="py-3 px-8 font-bold text-lg shadow transition-all duration-300 transform hover:scale-105"
-                style={{ backgroundColor: "white", color: "#136356", border: "none" }}
+                style={{ 
+                  backgroundColor: "white", 
+                  color: "#136356",
+                  border: "none"
+                }}
               >
                 Back to Categories
               </button>

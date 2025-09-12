@@ -119,8 +119,10 @@ export default function HotDrinksPage() {
       category: 'hot-drink',
       image: '/mochaonly.jpg'
     },
-    { id: 15, name: 'Extra Syrup', price: 190, category: 'extra', image: '/syrup.jpg' },
-    { id: 16, name: 'Whipped Cream', price: 90, category: 'extra', image: '/whippedcream.jpg' }
+    { id: 15, name: 'Hot cocoa', price: 690, category: 'hot-drink', image: '/hotcocoa.jpg' },
+    { id: 16, name: 'Extra Syrup', price: 190, category: 'extra', image: '/syrup.jpg' },
+    { id: 17, name: 'Whipped Cream', price: 90, category: 'extra', image: '/whippedcream.jpg' },
+    
   ];
 
   return (

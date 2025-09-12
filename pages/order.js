@@ -25,7 +25,9 @@ export default function OrderPage() {
     { name: 'SMOOTHIES', description: 'Fruit blends and healthy smoothies', icon: '🥤', href: '/smoothies' },
     { name: 'LEMONADES', description: 'Classic and flavored lemonades', icon: '🍋', href: '/lemonades' },
     { name: 'SPYRO SPECIALS & EXTRAS', description: 'Signature drinks and add-ons', icon: '⭐', href: '/specials' },
-    { name: 'DESSERTS', description: 'Sweet treats and indulgent desserts', icon: '🍰', href: '/desserts' }
+    { name: 'DESSERTS', description: 'Sweet treats and indulgent desserts', icon: '🍰', href: '/desserts' },
+    { name: 'MILKSHAKES', description: 'Creamy and refreshing milkshakes', icon: '🥛', href: '/milkshakes' },
+    { name: 'WATER & HELL', description: 'Refreshing water and energizing Hell drinks', icon: '💦', href: '/waterhell' }
   ];
 
   return (
