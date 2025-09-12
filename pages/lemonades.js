@@ -1,6 +1,7 @@
 import { useCart } from '../contexts/CartContext';
 import Header from '../components/Header';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function LemonadesPage() {
   const { cartItems, addToCart, updateQuantity, removeFromCart } = useCart();
@@ -51,15 +52,13 @@ export default function LemonadesPage() {
               return (
                 <div key={product.id} className="bg-white shadow-md p-4 flex">
                   {/* Product Image */}
-                  <div className="w-1/4">
-                    <img 
+                  <div className="w-1/4 relative">
+                    <Image 
                       src={product.image} 
                       alt={product.name}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = "https://via.placeholder.com/150?text=Lemonade";
-                      }}
+                      fill
+                      className="object-cover"
+                      priority={product.id === 301} // preload the first image
                     />
                   </div>
                   

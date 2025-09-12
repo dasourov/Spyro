@@ -1,6 +1,7 @@
 import { useCart } from '../contexts/CartContext';
 import Header from '../components/Header';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function HotDrinksPage() {
   const { cartItems, addToCart, updateQuantity, removeFromCart } = useCart();
@@ -141,15 +142,14 @@ export default function HotDrinksPage() {
               return (
                 <div key={product.id} className="bg-white shadow-md p-4 flex">
                   {/* Product Image */}
-                  <div className="w-1/4">
-                    <img 
-                      src={product.image} 
+                  <div className="w-1/4 relative">
+                    <Image
+                      src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover"
-                      onError={(e) => {
-                        e.target.onerror = null;
-                        e.target.src = "https://via.placeholder.com/150?text=Drink";
-                      }}
+                      fill
+                      className="object-cover"
+                      placeholder="blur"
+                      blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2N89uzbfwAI0QNzUHPZ1QAAAABJRU5ErkJggg==" 
                     />
                   </div>
                   
