@@ -15,12 +15,13 @@ export default function IcedDrinksPage() {
     { id: 403, name: 'Salted Caramel', price: 190 }
   ];
   
-  // Milk options
+    // Milk options
   const milkOptions = [
-    { id: 501, name: 'Lactose free Milk', price: 90 },
-    { id: 502, name: 'Almond Milk', price: 90 },
-    { id: 503, name: 'Soya Milk', price: 90 },
-    { id: 504, name: 'Oat Milk (Sugarfree)', price: 90 }
+    { id: 501, name: 'Lactose free Milk', price: 190 },
+    { id: 502, name: 'Almond Milk', price: 190 },
+    { id: 503, name: 'Soya Milk', price: 190 },
+    { id: 504, name: 'Oat Milk (Sugarfree)', price: 190 },
+    { id: 505, name: 'Coconut Milk', price: 190 },
   ];
   
   const icedDrinks = [

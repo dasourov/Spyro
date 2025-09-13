@@ -1,4 +1,3 @@
-
 import { useCart } from '../contexts/CartContext';
 import Header from '../components/Header';
 import Link from 'next/link';
@@ -18,11 +17,12 @@ export default function HotDrinksPage() {
   
   // Milk options
   const milkOptions = [
-    { id: 501, name: 'Lactose free Milk', price: 90 },
-    { id: 502, name: 'Almond Milk', price: 90 },
-    { id: 503, name: 'Soya Milk', price: 90 },
-    { id: 504, name: 'Oat Milk (Sugarfree)', price: 90 }
-  ];
+    { id: 501, name: 'Lactose free Milk', price: 190 },
+    { id: 502, name: 'Almond Milk', price: 190 },
+    { id: 503, name: 'Soya Milk', price: 190 },
+    { id: 504, name: 'Oat Milk (Sugarfree)', price: 190 },
+    { id: 505, name: 'Coconut Milk', price: 190 },
+  ]; 
   
   const coffeeProducts = [ 
     { id: 1, name: 'Espresso', description: 'Strong and bold coffee shot', price: 690, category: 'hot-drink', image: '/espresso.jpg' }, 
@@ -39,7 +39,7 @@ export default function HotDrinksPage() {
     { id: 12, name: 'Cappuccino (Medium)', description: 'Espresso with milk foam (Medium)', price: 1290, category: 'hot-drink', image: '/cappuccinoonly.jpg' }, 
     { id: 13, name: 'Mocha (Small)', description: 'Espresso with chocolate & steamed milk (Small)', price: 1350, category: 'hot-drink', image: '/mochaonly.jpg' }, 
     { id: 14, name: 'Mocha (Medium)', description: 'Espresso with chocolate & steamed milk (Medium)', price: 1590, category: 'hot-drink', image: '/mochaonly.jpg' }, 
-    { id: 15, name: 'Hot cocoa', price: 690, category: 'hot-drink', image: '/hotcocoa.jpg' }, 
+    { id: 15, name: 'Hot cocoa', price: 690, category: 'hot-drink', image: '/hotcocoa.jpg' },
     { id: 16, name: 'Whipped Cream', price: 90, category: 'extra', image: '/whippedcream.jpg' }, 
   ];
   
@@ -91,6 +91,11 @@ export default function HotDrinksPage() {
     });
   };
   
+  // Check if product is espresso or double espresso
+  const isEspressoProduct = (productId) => {
+    return productId === 1 || productId === 2;
+  };
+  
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#136356" }}>
       <Header />
@@ -108,6 +113,7 @@ export default function HotDrinksPage() {
               const compositeId = getCompositeId(product, currentExtras);
               const cartItem = cartItems.find(item => item.id === compositeId);
               const quantity = cartItem ? cartItem.quantity : 0;
+              const isEspresso = isEspressoProduct(product.id);
               
               return (
                 <div key={product.id} className="bg-white shadow-md p-4 flex flex-col">
@@ -132,22 +138,26 @@ export default function HotDrinksPage() {
                         {/* Syrup and Milk Options for hot drinks */}
                         {product.category === 'hot-drink' && (
                           <div className="mt-2 space-y-2">
-                            <div>
-                              <label className="block text-sm font-medium text-gray-700 mb-1">Syrup Option</label>
-                              <select
-                                className="w-full p-2 border border-gray-300 rounded-md"
-                                value={selectedExtras[product.id]?.syrup || ''}
-                                onChange={(e) => handleExtraChange(product.id, 'syrup', parseInt(e.target.value) || null)}
-                              >
-                                <option value="">No Syrup</option>
-                                {syrupOptions.map(syrup => (
-                                  <option key={syrup.id} value={syrup.id}>
-                                    {syrup.name} (+{syrup.price} Ft)
-                                  </option>
-                                ))}
-                              </select>
-                            </div>
+                            {/* Only show syrup option if it's not an espresso product */}
+                            {!isEspresso && (
+                              <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Syrup Option</label>
+                                <select
+                                  className="w-full p-2 border border-gray-300 rounded-md"
+                                  value={selectedExtras[product.id]?.syrup || ''}
+                                  onChange={(e) => handleExtraChange(product.id, 'syrup', parseInt(e.target.value) || null)}
+                                >
+                                  <option value="">No Syrup</option>
+                                  {syrupOptions.map(syrup => (
+                                    <option key={syrup.id} value={syrup.id}>
+                                      {syrup.name} (+{syrup.price} Ft)
+                                    </option>
+                                  ))}
+                                </select>
+                              </div>
+                            )}
                             
+                            {/* Always show milk option for all hot drinks */}
                             <div>
                               <label className="block text-sm font-medium text-gray-700 mb-1">Milk Option</label>
                               <select
