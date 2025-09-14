@@ -1,7 +1,6 @@
 // pages/shop-status.js
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
 
 export default function ShopStatusPage() {
   const [isOpen, setIsOpen] = useState(true);
@@ -12,13 +11,11 @@ export default function ShopStatusPage() {
 
   // Check authentication and load shop status on component mount
   useEffect(() => {
-    // Check if user is authenticated
     const authStatus = localStorage.getItem('shopAdminAuthenticated');
     if (authStatus === 'true') {
       setIsAuthenticated(true);
     }
     
-    // Load current shop status
     const shopStatus = localStorage.getItem('shopOpenStatus');
     if (shopStatus) {
       setIsOpen(shopStatus === 'true');
@@ -27,8 +24,7 @@ export default function ShopStatusPage() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Simple password authentication (in production, use a more secure method)
-    if (password === 'admin123') { // Change this to your desired password
+    if (password === 'spyro2025') {
       localStorage.setItem('shopAdminAuthenticated', 'true');
       setIsAuthenticated(true);
       setError('');
@@ -69,17 +65,12 @@ export default function ShopStatusPage() {
             {error && <p className="text-red-500 mb-4">{error}</p>}
             <button
               type="submit"
-              className="w-full py-2 px-4 text-white rounded-md transition-colors duration-300"
+              className="w-full py-2 px-4 text-white rounded-md"
               style={{ backgroundColor: "#136356" }}
             >
               Login
             </button>
           </form>
-          <div className="mt-4 text-center">
-            <Link href="/" className="text-blue-500 hover:underline">
-              Back to Home
-            </Link>
-          </div>
         </div>
       </div>
     );
@@ -101,7 +92,7 @@ export default function ShopStatusPage() {
           <div className="flex justify-center mb-8">
             <button
               onClick={handleToggleStatus}
-              className={`py-3 px-8 font-bold text-lg shadow transition-all duration-300 transform hover:scale-105 ${
+              className={`py-3 px-8 font-bold text-lg shadow ${
                 isOpen 
                   ? 'bg-red-500 hover:bg-red-600' 
                   : 'bg-green-500 hover:bg-green-600'
@@ -111,12 +102,7 @@ export default function ShopStatusPage() {
             </button>
           </div>
           
-          <div className="flex justify-between">
-            <Link href="/">
-              <button className="py-2 px-4 text-gray-600 hover:text-gray-800">
-                Back to Home
-              </button>
-            </Link>
+          <div className="flex justify-center">
             <button
               onClick={handleLogout}
               className="py-2 px-4 text-gray-600 hover:text-gray-800"
