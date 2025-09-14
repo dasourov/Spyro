@@ -63,13 +63,18 @@ export default function OrderPage() {
               <p className="text-lg mb-6 text-gray-600">Our team is taking a short break to prepare more delicious drinks for you.</p>
               
               <div className="bg-gray-50 rounded-lg p-6 mb-6">
-                <p className="text-lg text-gray-700 italic">
-                  &quot;Good coffee is like friendship - worth waiting for.&quot;
-                </p>
-              </div>
-              
-              <p className="text-lg mb-2 text-gray-600">We&apos;ll be back soon to serve you with our finest beverages!</p>
-              <p className="text-md text-gray-500">Please check back during our opening hours.</p>
+  <p className="text-lg text-gray-700 italic">
+    {`"Good coffee is like friendship - worth waiting for."`}
+  </p>
+</div>
+
+<p className="text-lg mb-2 text-gray-600">
+  {`We'll be back soon to serve you with our finest beverages!`}
+</p>
+<p className="text-md text-gray-500">
+  {`Please check back during our opening hours.`}
+</p>
+
             </div>
           </div>
         </div>
