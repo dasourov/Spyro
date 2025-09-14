@@ -46,27 +46,31 @@ export default function OrderPage() {
         <Header />
         <div className="flex-grow flex items-center justify-center">
           <div className="text-center p-8 max-w-md">
-           <div className="bg-white rounded-lg p-12 shadow-lg text-center">
-  <div className="mb-6">
-    <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-4">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" style={{ color: "#136356" }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    </div>
-    <h1 className="text-3xl font-bold mb-2" style={{ color: "#136356" }}>We're Currently Closed</h1>
-    <div className="w-20 h-1 mx-auto mb-4" style={{ backgroundColor: "#136356" }}></div>
-  </div>
-  
-  <p className="text-xl mb-4 text-gray-700">Thank you for your interest in SPYRÓ Coffee!</p>
-  <p className="text-lg mb-6 text-gray-600">Our team is taking a short break to prepare more delicious drinks for you.</p>
-  
-  <div className="bg-gray-50 rounded-lg p-6 mb-6">
-    <p className="text-lg text-gray-700 italic">"Good coffee is like friendship - worth waiting for."</p>
-  </div>
-  
-  <p className="text-lg mb-2 text-gray-600">We'll be back soon to serve you with our finest beverages!</p>
-  <p className="text-md text-gray-500">Please check back during our opening hours.</p>
-</div>
+            <div className="bg-white rounded-lg p-12 shadow-lg text-center">
+              <div className="mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gray-100 mb-4">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" style={{ color: "#136356" }} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h1 className="text-3xl font-bold mb-2" style={{ color: "#136356" }}>
+                  We&apos;re Currently Closed
+                </h1>
+                <div className="w-20 h-1 mx-auto mb-4" style={{ backgroundColor: "#136356" }}></div>
+              </div>
+              
+              <p className="text-xl mb-4 text-gray-700">Thank you for your interest in SPYRÓ Coffee!</p>
+              <p className="text-lg mb-6 text-gray-600">Our team is taking a short break to prepare more delicious drinks for you.</p>
+              
+              <div className="bg-gray-50 rounded-lg p-6 mb-6">
+                <p className="text-lg text-gray-700 italic">
+                  &quot;Good coffee is like friendship - worth waiting for.&quot;
+                </p>
+              </div>
+              
+              <p className="text-lg mb-2 text-gray-600">We&apos;ll be back soon to serve you with our finest beverages!</p>
+              <p className="text-md text-gray-500">Please check back during our opening hours.</p>
+            </div>
           </div>
         </div>
       </div>
