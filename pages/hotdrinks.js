@@ -39,8 +39,8 @@ export default function HotDrinksPage() {
     { id: 12, name: 'Cappuccino (Medium)', description: 'Espresso with milk foam (Medium)', price: 1290, category: 'hot-drink', image: '/cappuccinoonly.jpg' }, 
     { id: 13, name: 'Mocha (Small)', description: 'Espresso with chocolate & steamed milk (Small)', price: 1350, category: 'hot-drink', image: '/mochaonly.jpg' }, 
     { id: 14, name: 'Mocha (Medium)', description: 'Espresso with chocolate & steamed milk (Medium)', price: 1590, category: 'hot-drink', image: '/mochaonly.jpg' }, 
-    { id: 15, name: 'Hot cocoa', price: 690, category: 'hot-drink', image: '/hotcocoa.jpg' }
-    // { id: 16, name: 'Whipped Cream', price: 90, category: 'extra', image: '/whippedcream.jpg' }, 
+    { id: 15, name: 'Hot cocoa', price: 690, category: 'hot-drink', image: '/hotcocoa.jpg' },
+    { id: 16, name: 'Whipped Cream', price: 90, category: 'extra', image: '/whippedcream.jpg' }
   ];
   
   const handleExtraChange = (productId, extraType, value) => {
