@@ -1,0 +1,5 @@
+{
+  "/hotdrinks": [
+    "./static/chunks/pages/hotdrinks.js"
+  ]
+}
