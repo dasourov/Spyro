@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-vitaAID SymptomChecker
-Your smart health companion for quick, reliable guidance.
-
-The vitaAID SymptomChecker helps you make sense of your health concerns by analyzing your symptoms and providing tailored recommendations. Simply enter how you’re feeling, and the AI-powered system suggests possible causes and whether you should seek in-person care, try a video consultation, or manage symptoms at home.
-
-Key benefits:
-
-🧠 AI-driven insights – Built on advanced medical models for accurate, personalized suggestions.
-
-🏥 Care guidance – Learn when to visit a doctor, book a telehealth session, or apply self-care.
-
-⚡ Fast & simple – Enter symptoms in just seconds and receive instant feedback.
-
-🔒 Privacy-first – Your data is secure, confidential, and never shared without consent.
-
-With vitaAID SymptomChecker, you can take the first step toward better health—anytime, anywhere.
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
