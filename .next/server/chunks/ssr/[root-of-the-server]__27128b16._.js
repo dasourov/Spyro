@@ -145,11 +145,6 @@ function MilkshakesPage() {
             id: 403,
             name: 'Salted Caramel Syrup',
             price: 190
-        },
-        {
-            id: 404,
-            name: 'Tiger Syrup',
-            price: 190
         }
     ];
     // Milk options
@@ -250,7 +245,7 @@ function MilkshakesPage() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Header$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/pages/milkshakes.js",
-                lineNumber: 101,
+                lineNumber: 100,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("main", {
@@ -263,7 +258,7 @@ function MilkshakesPage() {
                             children: "Milkshakes Menu"
                         }, void 0, false, {
                             fileName: "[project]/pages/milkshakes.js",
-                            lineNumber: 105,
+                            lineNumber: 104,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -271,7 +266,7 @@ function MilkshakesPage() {
                             children: "Choose from our selection of milkshakes"
                         }, void 0, false, {
                             fileName: "[project]/pages/milkshakes.js",
-                            lineNumber: 106,
+                            lineNumber: 105,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -279,7 +274,7 @@ function MilkshakesPage() {
                             children: "⭐ All products price include the VAT"
                         }, void 0, false, {
                             fileName: "[project]/pages/milkshakes.js",
-                            lineNumber: 107,
+                            lineNumber: 106,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -305,12 +300,12 @@ function MilkshakesPage() {
                                                         priority: product.id === 601
                                                     }, void 0, false, {
                                                         fileName: "[project]/pages/milkshakes.js",
-                                                        lineNumber: 122,
+                                                        lineNumber: 121,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/pages/milkshakes.js",
-                                                    lineNumber: 121,
+                                                    lineNumber: 120,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -323,7 +318,7 @@ function MilkshakesPage() {
                                                                     children: product.name
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/pages/milkshakes.js",
-                                                                    lineNumber: 134,
+                                                                    lineNumber: 133,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -331,7 +326,7 @@ function MilkshakesPage() {
                                                                     children: product.description
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/pages/milkshakes.js",
-                                                                    lineNumber: 135,
+                                                                    lineNumber: 134,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("p", {
@@ -342,13 +337,13 @@ function MilkshakesPage() {
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/pages/milkshakes.js",
-                                                                    lineNumber: 136,
+                                                                    lineNumber: 135,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/pages/milkshakes.js",
-                                                            lineNumber: 133,
+                                                            lineNumber: 132,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -361,7 +356,7 @@ function MilkshakesPage() {
                                                                             children: "Syrup Option"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/pages/milkshakes.js",
-                                                                            lineNumber: 142,
+                                                                            lineNumber: 141,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("select", {
@@ -374,7 +369,7 @@ function MilkshakesPage() {
                                                                                     children: "No Syrup"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/pages/milkshakes.js",
-                                                                                    lineNumber: 148,
+                                                                                    lineNumber: 147,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 syrupOptions.map((syrup)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("option", {
@@ -387,19 +382,19 @@ function MilkshakesPage() {
                                                                                         ]
                                                                                     }, syrup.id, true, {
                                                                                         fileName: "[project]/pages/milkshakes.js",
-                                                                                        lineNumber: 150,
+                                                                                        lineNumber: 149,
                                                                                         columnNumber: 31
                                                                                     }, this))
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/pages/milkshakes.js",
-                                                                            lineNumber: 143,
+                                                                            lineNumber: 142,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/pages/milkshakes.js",
-                                                                    lineNumber: 141,
+                                                                    lineNumber: 140,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -409,7 +404,7 @@ function MilkshakesPage() {
                                                                             children: "Milk Option"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/pages/milkshakes.js",
-                                                                            lineNumber: 158,
+                                                                            lineNumber: 157,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("select", {
@@ -422,7 +417,7 @@ function MilkshakesPage() {
                                                                                     children: "Regular Milk"
                                                                                 }, void 0, false, {
                                                                                     fileName: "[project]/pages/milkshakes.js",
-                                                                                    lineNumber: 164,
+                                                                                    lineNumber: 163,
                                                                                     columnNumber: 29
                                                                                 }, this),
                                                                                 milkOptions.map((milk)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("option", {
@@ -435,37 +430,37 @@ function MilkshakesPage() {
                                                                                         ]
                                                                                     }, milk.id, true, {
                                                                                         fileName: "[project]/pages/milkshakes.js",
-                                                                                        lineNumber: 166,
+                                                                                        lineNumber: 165,
                                                                                         columnNumber: 31
                                                                                     }, this))
                                                                             ]
                                                                         }, void 0, true, {
                                                                             fileName: "[project]/pages/milkshakes.js",
-                                                                            lineNumber: 159,
+                                                                            lineNumber: 158,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/pages/milkshakes.js",
-                                                                    lineNumber: 157,
+                                                                    lineNumber: 156,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/pages/milkshakes.js",
-                                                            lineNumber: 140,
+                                                            lineNumber: 139,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/pages/milkshakes.js",
-                                                    lineNumber: 132,
+                                                    lineNumber: 131,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/pages/milkshakes.js",
-                                            lineNumber: 119,
+                                            lineNumber: 118,
                                             columnNumber: 19
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -479,7 +474,7 @@ function MilkshakesPage() {
                                                 children: "Add to Cart"
                                             }, void 0, false, {
                                                 fileName: "[project]/pages/milkshakes.js",
-                                                lineNumber: 179,
+                                                lineNumber: 178,
                                                 columnNumber: 23
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
                                                 className: "flex items-center justify-between",
@@ -493,7 +488,7 @@ function MilkshakesPage() {
                                                                 children: "-"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/pages/milkshakes.js",
-                                                                lineNumber: 189,
+                                                                lineNumber: 188,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("span", {
@@ -501,7 +496,7 @@ function MilkshakesPage() {
                                                                 children: quantity
                                                             }, void 0, false, {
                                                                 fileName: "[project]/pages/milkshakes.js",
-                                                                lineNumber: 195,
+                                                                lineNumber: 194,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -510,13 +505,13 @@ function MilkshakesPage() {
                                                                 children: "+"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/pages/milkshakes.js",
-                                                                lineNumber: 196,
+                                                                lineNumber: 195,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/pages/milkshakes.js",
-                                                        lineNumber: 188,
+                                                        lineNumber: 187,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("button", {
@@ -533,40 +528,40 @@ function MilkshakesPage() {
                                                                 clipRule: "evenodd"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/pages/milkshakes.js",
-                                                                lineNumber: 208,
+                                                                lineNumber: 207,
                                                                 columnNumber: 29
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/pages/milkshakes.js",
-                                                            lineNumber: 207,
+                                                            lineNumber: 206,
                                                             columnNumber: 27
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/pages/milkshakes.js",
-                                                        lineNumber: 203,
+                                                        lineNumber: 202,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/pages/milkshakes.js",
-                                                lineNumber: 187,
+                                                lineNumber: 186,
                                                 columnNumber: 23
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/pages/milkshakes.js",
-                                            lineNumber: 177,
+                                            lineNumber: 176,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, product.id, true, {
                                     fileName: "[project]/pages/milkshakes.js",
-                                    lineNumber: 118,
+                                    lineNumber: 117,
                                     columnNumber: 17
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/pages/milkshakes.js",
-                            lineNumber: 110,
+                            lineNumber: 109,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("div", {
@@ -583,34 +578,34 @@ function MilkshakesPage() {
                                     children: "Back to Categories"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/milkshakes.js",
-                                    lineNumber: 222,
+                                    lineNumber: 221,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/pages/milkshakes.js",
-                                lineNumber: 221,
+                                lineNumber: 220,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/pages/milkshakes.js",
-                            lineNumber: 220,
+                            lineNumber: 219,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/pages/milkshakes.js",
-                    lineNumber: 104,
+                    lineNumber: 103,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/pages/milkshakes.js",
-                lineNumber: 103,
+                lineNumber: 102,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/pages/milkshakes.js",
-        lineNumber: 100,
+        lineNumber: 99,
         columnNumber: 5
     }, this);
 }

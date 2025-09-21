@@ -2,7 +2,15 @@
   "/": "pages/index.js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
+  "/_error": "pages/_error.js",
   "/api/shop-status": "pages/api/shop-status.js",
+  "/closed": "pages/closed.js",
+  "/desserts": "pages/desserts.js",
+  "/hotdrinks": "pages/hotdrinks.js",
+  "/lemonades": "pages/lemonades.js",
+  "/milkshakes": "pages/milkshakes.js",
   "/order": "pages/order.js",
-  "/shop-status": "pages/shop-status.js"
+  "/shop-status": "pages/shop-status.js",
+  "/smoothies": "pages/smoothies.js",
+  "/waterhell": "pages/waterhell.js"
 }
