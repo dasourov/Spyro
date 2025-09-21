@@ -98,13 +98,15 @@ export default function DessertsPage() {
                     {/* Add to Cart or Quantity Controls */}
                     <div className="mt-2">
                       {quantity === 0 ? (
-                        <button 
-                          onClick={() => addToCart(product)}
-                          className="py-2 px-6 font-medium text-white transition-colors duration-300"
-                          style={{ backgroundColor: "#136356" }}
-                        >
-                          Add to Cart
-                        </button>
+                       <button
+                            onClick={() => addToCart(product)}
+                            className="py-2 px-6 font-medium text-white transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                            style={{ backgroundColor: "#136356" }}
+                             disabled
+                      >
+                       Add to Cart
+                      </button>
+
                       ) : (
                         <div className="flex items-center justify-between">
                           <div className="flex items-center space-x-4">
