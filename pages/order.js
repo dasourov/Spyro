@@ -48,13 +48,44 @@ export default function OrderPage() {
     checkShopStatus();
   }, [table_id, router]);
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: "#136356" }}>
-        <p className="text-white text-xl">Loading...</p>
+if (loading) {
+  return (
+    <div className="min-h-screen flex flex-col items-center justify-center" style={{ backgroundColor: "#136356" }}>
+      <div className="flex flex-col items-center">
+        {/* Coffee Cup */}
+        <div className="relative w-16 h-20 mb-6">
+          {/* Cup */}
+          <div className="w-16 h-12 bg-white rounded-b-lg relative z-10"></div>
+          {/* Handle */}
+          <div className="absolute top-2 right-[-12px] w-4 h-6 border-4 border-white rounded-full"></div>
+          {/* Steam */}
+          <div className="absolute top-[-20px] left-4 w-1 h-6 bg-white rounded-full animate-steam"></div>
+          <div className="absolute top-[-25px] left-6 w-1 h-6 bg-white rounded-full animate-steam delay-200"></div>
+          <div className="absolute top-[-22px] left-8 w-1 h-6 bg-white rounded-full animate-steam delay-400"></div>
+        </div>
+
+        {/* Loading Text */}
+        <p className="text-white text-xl font-semibold mb-2">Checking Shop Status...</p>
       </div>
-    );
-  }
+
+      {/* Add custom Tailwind animations */}
+      <style jsx>{`
+        @keyframes steam {
+          0% { transform: translateY(0) scaleX(1); opacity: 0.6; }
+          50% { transform: translateY(-10px) scaleX(1.2); opacity: 0.3; }
+          100% { transform: translateY(-20px) scaleX(1); opacity: 0; }
+        }
+        .animate-steam {
+          animation: steam 1.5s infinite ease-in-out;
+        }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-400 { animation-delay: 0.4s; }
+      `}</style>
+    </div>
+  );
+}
+
+
 
   // Normal order page if shop is open
   return (

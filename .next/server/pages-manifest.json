@@ -12,5 +12,6 @@
   "/order": "pages/order.js",
   "/shop-status": "pages/shop-status.js",
   "/smoothies": "pages/smoothies.js",
+  "/specials": "pages/specials.js",
   "/waterhell": "pages/waterhell.js"
 }

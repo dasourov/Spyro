@@ -29,6 +29,9 @@ self.__BUILD_MANIFEST = {
   "/smoothies": [
     "./static/chunks/pages/smoothies.js"
   ],
+  "/specials": [
+    "./static/chunks/pages/specials.js"
+  ],
   "/waterhell": [
     "./static/chunks/pages/waterhell.js"
   ],

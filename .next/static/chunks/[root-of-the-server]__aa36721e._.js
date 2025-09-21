@@ -681,12 +681,14 @@ __turbopack_context__.s([
     ()=>OrderPage
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/styled-jsx/style.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$link$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/link.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Header$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/Header.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/router.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$index$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/index.js [client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
+;
 ;
 ;
 ;
@@ -781,22 +783,81 @@ function OrderPage() {
     ]);
     if (loading) {
         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "min-h-screen flex items-center justify-center",
             style: {
                 backgroundColor: "#136356"
             },
-            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                className: "text-white text-xl",
-                children: "Loading..."
-            }, void 0, false, {
-                fileName: "[project]/pages/order.js",
-                lineNumber: 54,
-                columnNumber: 9
-            }, this)
-        }, void 0, false, {
+            className: "jsx-85c919384cbc1533" + " " + "min-h-screen flex flex-col items-center justify-center",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "jsx-85c919384cbc1533" + " " + "flex flex-col items-center",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "jsx-85c919384cbc1533" + " " + "relative w-16 h-20 mb-6",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "jsx-85c919384cbc1533" + " " + "w-16 h-12 bg-white rounded-b-lg relative z-10"
+                                }, void 0, false, {
+                                    fileName: "[project]/pages/order.js",
+                                    lineNumber: 58,
+                                    columnNumber: 11
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "jsx-85c919384cbc1533" + " " + "absolute top-2 right-[-12px] w-4 h-6 border-4 border-white rounded-full"
+                                }, void 0, false, {
+                                    fileName: "[project]/pages/order.js",
+                                    lineNumber: 60,
+                                    columnNumber: 11
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "jsx-85c919384cbc1533" + " " + "absolute top-[-20px] left-4 w-1 h-6 bg-white rounded-full animate-steam"
+                                }, void 0, false, {
+                                    fileName: "[project]/pages/order.js",
+                                    lineNumber: 62,
+                                    columnNumber: 11
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "jsx-85c919384cbc1533" + " " + "absolute top-[-25px] left-6 w-1 h-6 bg-white rounded-full animate-steam delay-200"
+                                }, void 0, false, {
+                                    fileName: "[project]/pages/order.js",
+                                    lineNumber: 63,
+                                    columnNumber: 11
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "jsx-85c919384cbc1533" + " " + "absolute top-[-22px] left-8 w-1 h-6 bg-white rounded-full animate-steam delay-400"
+                                }, void 0, false, {
+                                    fileName: "[project]/pages/order.js",
+                                    lineNumber: 64,
+                                    columnNumber: 11
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/pages/order.js",
+                            lineNumber: 56,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "jsx-85c919384cbc1533" + " " + "text-white text-xl font-semibold mb-2",
+                            children: "Checking Shop Status..."
+                        }, void 0, false, {
+                            fileName: "[project]/pages/order.js",
+                            lineNumber: 68,
+                            columnNumber: 9
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/pages/order.js",
+                    lineNumber: 54,
+                    columnNumber: 7
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$styled$2d$jsx$2f$style$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
+                    id: "85c919384cbc1533",
+                    children: "@keyframes steam{0%{opacity:.6;transform:translateY(0)scaleX(1)}50%{opacity:.3;transform:translateY(-10px)scaleX(1.2)}to{opacity:0;transform:translateY(-20px)scaleX(1)}}.animate-steam.jsx-85c919384cbc1533{animation:1.5s ease-in-out infinite steam}.delay-200.jsx-85c919384cbc1533{animation-delay:.2s}.delay-400.jsx-85c919384cbc1533{animation-delay:.4s}"
+                }, void 0, false, void 0, this)
+            ]
+        }, void 0, true, {
             fileName: "[project]/pages/order.js",
             lineNumber: 53,
-            columnNumber: 7
+            columnNumber: 5
         }, this);
     }
     // Normal order page if shop is open
@@ -808,7 +869,7 @@ function OrderPage() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Header$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/pages/order.js",
-                lineNumber: 62,
+                lineNumber: 93,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -824,7 +885,7 @@ function OrderPage() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/pages/order.js",
-                            lineNumber: 65,
+                            lineNumber: 96,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -832,7 +893,7 @@ function OrderPage() {
                             children: "Select a category to view our menu items"
                         }, void 0, false, {
                             fileName: "[project]/pages/order.js",
-                            lineNumber: 68,
+                            lineNumber: 99,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -852,7 +913,7 @@ function OrderPage() {
                                                 children: category.icon
                                             }, void 0, false, {
                                                 fileName: "[project]/pages/order.js",
-                                                lineNumber: 77,
+                                                lineNumber: 108,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -862,7 +923,7 @@ function OrderPage() {
                                                         children: category.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/pages/order.js",
-                                                        lineNumber: 79,
+                                                        lineNumber: 110,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -870,29 +931,29 @@ function OrderPage() {
                                                         children: category.description
                                                     }, void 0, false, {
                                                         fileName: "[project]/pages/order.js",
-                                                        lineNumber: 80,
+                                                        lineNumber: 111,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/pages/order.js",
-                                                lineNumber: 78,
+                                                lineNumber: 109,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/pages/order.js",
-                                        lineNumber: 76,
+                                        lineNumber: 107,
                                         columnNumber: 17
                                     }, this)
                                 }, category.name, false, {
                                     fileName: "[project]/pages/order.js",
-                                    lineNumber: 72,
+                                    lineNumber: 103,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/pages/order.js",
-                            lineNumber: 70,
+                            lineNumber: 101,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -909,34 +970,34 @@ function OrderPage() {
                                     children: "Back to Home"
                                 }, void 0, false, {
                                     fileName: "[project]/pages/order.js",
-                                    lineNumber: 89,
+                                    lineNumber: 120,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/pages/order.js",
-                                lineNumber: 88,
+                                lineNumber: 119,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/pages/order.js",
-                            lineNumber: 87,
+                            lineNumber: 118,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/pages/order.js",
-                    lineNumber: 64,
+                    lineNumber: 95,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/pages/order.js",
-                lineNumber: 63,
+                lineNumber: 94,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/pages/order.js",
-        lineNumber: 61,
+        lineNumber: 92,
         columnNumber: 5
     }, this);
 }
