@@ -2,10 +2,7 @@
   "/": "pages/index.js",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/_error": "pages/_error.js",
-  "/cart": "pages/cart.js",
-  "/hotdrinks": "pages/hotdrinks.js",
-  "/milkshakes": "pages/milkshakes.js",
+  "/api/shop-status": "pages/api/shop-status.js",
   "/order": "pages/order.js",
-  "/payment": "pages/payment.js"
+  "/shop-status": "pages/shop-status.js"
 }

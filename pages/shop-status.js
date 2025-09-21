@@ -1,58 +1,95 @@
 // pages/shop-status.js
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function ShopStatusPage() {
   const [isOpen, setIsOpen] = useState(true);
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState("");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const router = useRouter();
 
-  // Check authentication and load shop status on component mount
+  // Load authentication + shop status
   useEffect(() => {
-    const authStatus = localStorage.getItem('shopAdminAuthenticated');
-    if (authStatus === 'true') {
+    const authStatus = localStorage.getItem("shopAdminAuthenticated");
+    if (authStatus === "true") {
       setIsAuthenticated(true);
     }
-    
-    const shopStatus = localStorage.getItem('shopOpenStatus');
-    if (shopStatus) {
-      setIsOpen(shopStatus === 'true');
-    }
+
+    // Fetch from API
+    const fetchStatus = async () => {
+      try {
+        const res = await fetch("/api/shop-status");
+        const data = await res.json();
+        setIsOpen(data.isOpen);
+      } catch (err) {
+        console.error("Failed to fetch shop status:", err);
+      }
+    };
+
+    fetchStatus();
   }, []);
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (password === 'spyro2025') {
-      localStorage.setItem('shopAdminAuthenticated', 'true');
+    if (password === "spyro2025") {
+      localStorage.setItem("shopAdminAuthenticated", "true");
       setIsAuthenticated(true);
-      setError('');
+      setError("");
     } else {
-      setError('Incorrect password');
+      setError("Incorrect password");
     }
   };
 
-  const handleToggleStatus = () => {
+  const handleToggleStatus = async () => {
     const newStatus = !isOpen;
-    setIsOpen(newStatus);
-    localStorage.setItem('shopOpenStatus', newStatus.toString());
+
+    try {
+      const res = await fetch("/api/shop-status", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password: "spyro2025", newStatus }),
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        setIsOpen(data.isOpen); // ✅ update from server
+      } else {
+        const errData = await res.json();
+        setError(errData.error || "Failed to update status");
+      }
+    } catch (err) {
+      console.error("Failed to update shop status:", err);
+    }
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('shopAdminAuthenticated');
+    localStorage.removeItem("shopAdminAuthenticated");
     setIsAuthenticated(false);
-    router.push('/');
+    router.push("/");
   };
 
   if (!isAuthenticated) {
     return (
-      <div className="min-h-screen flex items-center justify-center" style={{ backgroundColor: "#136356" }}>
+      <div
+        className="min-h-screen flex items-center justify-center"
+        style={{ backgroundColor: "#136356" }}
+      >
         <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-          <h1 className="text-2xl font-bold mb-6 text-center" style={{ color: "#136356" }}>Shop Admin Login</h1>
+          <h1
+            className="text-2xl font-bold mb-6 text-center"
+            style={{ color: "#136356" }}
+          >
+            Shop Admin Login
+          </h1>
           <form onSubmit={handleLogin}>
             <div className="mb-4">
-              <label htmlFor="password" className="block text-gray-700 mb-2">Admin Password</label>
+              <label
+                htmlFor="password"
+                className="block text-gray-700 mb-2"
+              >
+                Admin Password
+              </label>
               <input
                 type="password"
                 id="password"
@@ -77,31 +114,43 @@ export default function ShopStatusPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#136356" }}>
+    <div
+      className="min-h-screen flex flex-col"
+      style={{ backgroundColor: "#136356" }}
+    >
       <div className="flex-grow flex items-center justify-center">
         <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
-          <h1 className="text-2xl font-bold mb-6 text-center" style={{ color: "#136356" }}>Shop Status Control</h1>
-          
+          <h1
+            className="text-2xl font-bold mb-6 text-center"
+            style={{ color: "#136356" }}
+          >
+            Shop Status Control
+          </h1>
+
           <div className="mb-8 text-center">
             <p className="text-lg mb-4">Current Shop Status:</p>
-            <div className={`inline-block px-6 py-3 rounded-full text-white font-bold ${isOpen ? 'bg-green-500' : 'bg-red-500'}`}>
-              {isOpen ? 'OPEN' : 'CLOSED'}
+            <div
+              className={`inline-block px-6 py-3 rounded-full text-white font-bold ${
+                isOpen ? "bg-green-500" : "bg-red-500"
+              }`}
+            >
+              {isOpen ? "OPEN" : "CLOSED"}
             </div>
           </div>
-          
+
           <div className="flex justify-center mb-8">
             <button
               onClick={handleToggleStatus}
               className={`py-3 px-8 font-bold text-lg shadow ${
-                isOpen 
-                  ? 'bg-red-500 hover:bg-red-600' 
-                  : 'bg-green-500 hover:bg-green-600'
+                isOpen
+                  ? "bg-red-500 hover:bg-red-600"
+                  : "bg-green-500 hover:bg-green-600"
               } text-white`}
             >
-              {isOpen ? 'Close Shop' : 'Open Shop'}
+              {isOpen ? "Close Shop" : "Open Shop"}
             </button>
           </div>
-          
+
           <div className="flex justify-center">
             <button
               onClick={handleLogout}

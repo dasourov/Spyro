@@ -6,9 +6,10 @@
   "static/chunks/node_modules_next_dist_shared_lib_2c2ec201._.js",
   "static/chunks/node_modules_next_dist_client_d0aa886c._.js",
   "static/chunks/node_modules_next_dist_2e2215b7._.js",
+  "static/chunks/node_modules_next_router_104fab1c.js",
   "static/chunks/node_modules_react-dom_4411d9bd._.js",
   "static/chunks/node_modules_db4bb196._.js",
-  "static/chunks/[root-of-the-server]__68f3e75a._.js"
+  "static/chunks/[root-of-the-server]__2d716426._.js"
 ],
     source: "entry"
 });
